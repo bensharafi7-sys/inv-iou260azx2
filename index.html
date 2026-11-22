@@ -9,11 +9,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="format-detection" content="telephone=no">
   <title>מאור יוסף מיארה · עלייה לתורה</title>
-  <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261122d">
-  <link rel="stylesheet" href="assets/css/invitation.css?v=20261122d">
+  <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261122g">
+  <link rel="stylesheet" href="assets/css/invitation.css?v=20261122g">
 </head>
 <body>
-  <audio id="bg-music" loop preload="auto" src="assets/music/gymnopedie-no1.mp3?v=20261122d"></audio>
+  <audio id="bg-music" loop preload="auto" src="assets/music/gymnopedie-no1.mp3?v=20261122g"></audio>
 
   <button type="button" id="mute-btn" class="mute-btn" aria-label="השתקת מוזיקה" aria-pressed="false">
     <svg class="icon-on" viewBox="0 0 24 24" aria-hidden="true">
@@ -33,7 +33,8 @@
         <div class="flap flap-top"></div>
       </div>
       <button type="button" id="seal-hit" class="seal-hit" aria-label="לחצו לפתיחה">
-        <span class="monogram">מ</span>
+        <span class="seal-glow" aria-hidden="true"></span>
+        <span class="seal-shimmer" aria-hidden="true"></span>
         <svg class="crack" viewBox="0 0 100 100" aria-hidden="true">
           <path d="M48 8 L52 22 L46 34 L55 48 L44 60 L54 74 L47 92"/>
           <path d="M52 22 L63 28"/>
@@ -53,8 +54,24 @@
         <p class="kicker sub fade-line">לעלייה לתורה של</p>
         <h1 class="honoree fade-line">מאור יוסף מיארה</h1>
         <span class="card-rule fade-line" aria-hidden="true"></span>
-        <p class="hebrew-date fade-line">ט׳ באדר ב׳ תשפ״ז</p>
-        <p class="greg-date fade-line">יום חמישי, 18.3.2027</p>
+      </div>
+    </section>
+
+    <section class="sec sec-scratch reveal" id="scratch">
+      <div class="scratch-inner">
+        <div class="scratch-card" id="scratch-card">
+          <div class="scratch-reveal" aria-live="polite">
+            <p class="scratch-kicker">המועד</p>
+            <p class="hebrew-date">ט׳ באדר ב׳ תשפ״ז</p>
+            <p class="greg-date">יום חמישי, 18.3.2027</p>
+          </div>
+          <canvas id="scratch-canvas" class="scratch-canvas" aria-label="גרדו כאן לחשיפת התאריך"></canvas>
+          <div class="scratch-hint" id="scratch-hint">
+            <span class="scratch-finger" aria-hidden="true">👆</span>
+            <span class="scratch-hint-text">גרדו כאן ✨</span>
+          </div>
+          <div class="scratch-sparkles" id="scratch-sparkles" aria-hidden="true"></div>
+        </div>
       </div>
     </section>
 
@@ -84,7 +101,7 @@
     </section>
 
     <section class="sec sec-portrait reveal" id="portrait">
-      <img src="assets/img/maor-portrait.webp?v=20261122d" width="941" height="1672" alt="מאור יוסף מיארה">
+      <img src="assets/img/maor-portrait.webp?v=20261122g" width="941" height="1672" alt="מאור יוסף מיארה">
     </section>
 
     <section class="sec sec-family reveal" id="family">
@@ -130,8 +147,7 @@
       <div class="closing-inner">
         <p class="closing-wish">נשמח לראותכם</p>
         <div class="closing-seal">
-          <img src="assets/img/seal-small-cut.webp?v=20261122d" width="600" height="621" alt="">
-          <span class="monogram-sm" aria-hidden="true">מ</span>
+          <img src="assets/img/seal-open.webp?v=20261122g" width="600" height="621" alt="">
         </div>
         <div class="closing-foot">
           <a class="wa-contact" href="https://wa.me/972506466300?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%94%D7%96%D7%9E%D7%A0%D7%94%20%D7%94%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C%D7%99%D7%AA%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" rel="noopener">
@@ -146,6 +162,14 @@
     </section>
   </main>
 
-  <script src="assets/js/invitation.js?v=20261122d"></script>
+  <nav id="invite-nav" hidden>
+    <div class="progress-dots" id="progress-dots" aria-hidden="true"></div>
+    <div class="nav-chevron" id="nav-chevron" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <button type="button" id="nav-next" class="nav-next">להמשך ↓</button>
+  </nav>
+
+  <script src="assets/js/invitation.js?v=20261122g"></script>
 </body>
 </html>
