@@ -542,11 +542,12 @@ body.show-schedule .sec-schedule {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3.2rem 1.5rem calc(3.4rem + var(--safe-bot));
+  /* Extra bottom padding keeps the footer above the bow in the card art. */
+  padding: 8svh 1.5rem calc(26svh + var(--safe-bot));
 }
 .closing-inner { width: min(100%, 22rem); }
 .closing-wish {
-  margin: 0 0 1.6rem;
+  margin: 0 0 1.15rem;
   font-family: var(--font-display);
   font-size: clamp(1.85rem, 7vw, 2.3rem);
   letter-spacing: 0.04em;
@@ -576,15 +577,50 @@ body.show-schedule .sec-schedule {
   pointer-events: none;
 }
 
+.closing-foot {
+  margin: 0.85rem auto 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wa-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.38rem;
+  padding: 0.4rem 0.7rem;
+  min-height: 44px;
+  color: var(--bronze-dark);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: clamp(0.92rem, 3.6vw, 1.02rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.wa-contact:hover,
+.wa-contact:focus-visible {
+  color: var(--bronze);
+}
+.wa-icon {
+  width: 1.1em;
+  height: 1.1em;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
 .site-credit,
 .music-credit {
-  margin: 2.6rem auto 0;
-  max-width: 15.5rem;
-  font-size: 0.58rem;
-  line-height: 1.5;
+  margin: 0.15rem auto 0;
+  max-width: 18rem;
+  font-size: 0.75rem;
+  line-height: 1.45;
   letter-spacing: 0.01em;
-  color: #a89890;
-  font-weight: 300;
+  color: #6f5e56;
+  font-weight: 400;
 }
 
 /* Scroll reveal */
