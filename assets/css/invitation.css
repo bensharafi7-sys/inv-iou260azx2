@@ -576,6 +576,7 @@ body.show-schedule .sec-schedule {
   pointer-events: none;
 }
 
+.site-credit,
 .music-credit {
   margin: 2.6rem auto 0;
   max-width: 15.5rem;
